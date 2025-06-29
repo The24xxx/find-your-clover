@@ -72,10 +72,7 @@ img {
 }
 
 .clover {
-  outline: 3px solid red;
-  outline-offset: 2px;
-  box-shadow: 0 0 10px 5px red;
-  border-radius: 8px;
+
   z-index: 10;
 }
 
