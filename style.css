@@ -1,0 +1,101 @@
+body {
+  background-color: #a3d977; /* světlounce zelené pozadí stránky */
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* 🎯 Herní kontejner */
+#game-container {
+  width: min(90vw, 90vh);
+  height: min(90vw, 90vh);
+  max-width: 800px;
+  max-height: 600px;
+  margin: 0 auto;
+
+  background-color: transparent;
+  border: 3px solid green;
+  border-radius: 10px;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* 🔥 Rozmazané pozadí uvnitř herní plochy */
+.game-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url('assets/grass.png');
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  filter: blur(4px);
+
+  z-index: 0;
+}
+
+/* 🏷️ Nadpis */
+h1 {
+  margin: 20px;
+  font-size: 1.8em;
+  color: black; /* černý text */
+  position: relative;
+  z-index: 2;
+}
+
+/* 🧠 Zpráva */
+#message {
+  margin: 10px;
+  font-size: 1.4em;
+  color: black; /* černý text */
+  position: relative;
+  z-index: 2;
+}
+
+/* 🎨 Obecné obrázky */
+img {
+  image-rendering: pixelated;
+}
+
+/* 🍀 Čtyřlístek a falešné jetely */
+.clover, .leaf {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.clover {
+  outline: 3px solid red;
+  outline-offset: 2px;
+  box-shadow: 0 0 10px 5px red;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.leaf {
+  z-index: 1;
+}
+
+/* 📱 Mobilní optimalizace */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.3em;
+    margin: 8px;
+  }
+
+  #message {
+    font-size: 1.1em;
+  }
+
+  .clover, .leaf {
+    width: 48px;
+    height: 48px;
+  }
+}
